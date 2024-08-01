@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'PdfPreviewPage.dart';
+import 'Reporting.dart';
 
 class CreatePdfMainPage extends StatelessWidget
 {
@@ -16,14 +17,14 @@ class CreatePdfMainPage extends StatelessWidget
       appBar: AppBar(title: const Text("Articles page"),),
       body: Column(
         children: [
-          Image.asset("assets/phone.png"),
+          Image.asset("assets/images/logo.jpg"),
           Text(text),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.of(context).push(MaterialPageRoute(builder: (context){
-            return  PdfPreviewPage(text);
+            return PdfPreviewPage(text);
           }));
         },
         child: const Icon(Icons.picture_as_pdf_sharp),
